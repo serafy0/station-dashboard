@@ -1,103 +1,62 @@
-import Image from "next/image";
+import { Navbar } from "@/components/Navbar";
+import { SideTechPanel } from "@/components/SidePanel";
+import { GlassPanel } from "@/components/MiddlePanel";
+import { Zap, Activity, Droplets, Bell, FileText, BarChart3, Wrench, Battery, CloudSun, Mic } from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <main className="h-screen w-screen flex flex-col bg-[#020408] text-white overflow-hidden selection:bg-brand-primary/30">
+      <Navbar />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      <div className="flex-1 grid grid-cols-12 gap-4 p-4 min-h-0 pt-10"> 
+        
+        
+        <div className="col-span-3 flex flex-col gap-4 h-full">
+          <SideTechPanel title="Energy Consumption" icon={Zap} className="h-[22%]" />
+          <SideTechPanel title="Electrical System" icon={Battery} className="h-[22%]" />
+          <SideTechPanel title="Pumps Status" icon={Activity} className="flex-1" />
+          <SideTechPanel title="Notification Monitor" icon={Bell} className="h-[15%]" />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+
+        
+        <div className="col-span-6 flex flex-col gap-3 h-full relative">
+          
+          
+          <div className="absolute top-0 left-6 right-6 z-20 flex justify-between pointer-events-none">
+             <div className="flex items-center gap-3 bg-[#0a1329]/90 border border-[#162345] rounded-full px-4 py-1.5 backdrop-blur-md shadow-lg pointer-events-auto">
+                <CloudSun size={14} className="text-red-500"/> 
+                <span className="text-xs text-gray-300 font-mono">06 Jan 2026</span>
+                <span className="w-[1px] h-3 bg-gray-600" />
+                <span className="text-xs text-brand-primary font-mono font-bold">09:42:59 am</span>
+             </div>
+             <div className="flex items-center gap-3 pointer-events-auto">
+                <div className="bg-[#0a1329]/90 border border-[#162345] rounded-full px-4 py-1.5 text-orange-400 font-bold font-mono text-xs">23.5°C</div>
+                <button className="bg-brand-primary text-black rounded-full p-1.5 hover:scale-110"><Mic size={14}/></button>
+             </div>
+          </div>
+
+          <div className="flex-[3] bg-[#060b19]/20 border border-[#162345]/30 rounded-xl relative overflow-hidden flex items-center justify-center group mt-8">
+             <div className="absolute inset-0 bg-[linear-gradient(rgba(0,240,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(0,240,255,0.05)_1px,transparent_1px)] bg-[size:60px_60px] [transform:perspective(800px)_rotateX(60deg)] origin-bottom opacity-40" />
+             <div className="text-brand-primary/40 text-xs tracking-[0.3em] font-mono border border-brand-primary/20 px-4 py-2 rounded">
+                [ 3D STATION PREVIEW ]
+             </div>
+          </div>
+
+          <div className="h-[25%] grid grid-cols-4 gap-3">
+             <GlassPanel title="Station Invoice" icon={FileText} className="col-span-1" />
+             <GlassPanel title="Current Consumption Monitor" icon={Zap} className="col-span-2" />
+             <GlassPanel title="Station Performance & KPI" icon={Activity} className="col-span-1" />
+          </div>
+        </div>
+
+        <div className="col-span-3 flex flex-col gap-4 h-full">
+          <SideTechPanel title="Station Flow" icon={Activity} className="h-[20%]" />
+          <SideTechPanel title="Water Levels" icon={Droplets} className="h-[25%]" />
+          <SideTechPanel title="Flow / Level Trend" icon={BarChart3} className="flex-1" />
+          <SideTechPanel title="System Maintenance" icon={Wrench} className="h-[20%]" />
+        </div>
+
+      </div>
+    </main>
   );
 }
