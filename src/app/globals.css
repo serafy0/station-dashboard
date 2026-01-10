@@ -27,3 +27,17 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
 }
+
+@media (orientation: portrait) {
+  #rotate-overlay {
+    display: flex !important;
+  }
+  
+  #dashboard-content {
+    display: none !important;
+  }
+}
+
+html {
+  font-size: 16px; 
+}

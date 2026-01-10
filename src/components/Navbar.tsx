@@ -45,19 +45,20 @@ export function Navbar() {
                 {leftItems.map(item => <NavBtn key={item.name} {...item} />)}
             </div>
 
-            <div className="flex flex-col items-center justify-center px-8 relative h-full">
-                <span className="text-3xl font-bold text-white font-serif tracking-widest drop-shadow-[0_0_8px_rgba(255,255,255,0.5)] z-20 mt-1">
+            <div className="flex flex-col items-center justify-center px-6 relative h-full pt-9">
+                <span className="text-3xl font-bold text-white font-serif tracking-widest drop-shadow-[0_0_8px_rgba(255,255,255,0.5)] z-20 mt-1 whitespace-nowrap">
                     Station 5
                 </span>
                 
                 <div 
-                    className="absolute bottom-[-14px] w-[220px] h-[30px] bg-[#1e293b] border-b border-l border-r border-[#334155] z-10"
+                    className="absolute bottom-[-14px] w-[260px] h-[30px] bg-[#1e293b] border-b border-l border-r border-[#334155] z-10"
                     style={{ 
                         clipPath: "polygon(0 0, 100% 0, 85% 100%, 15% 100%)",
                         marginBottom: "0px" 
                     }}
                 />
-                <div className="absolute bottom-[-1px] w-[200px] h-[2px] bg-[#1e293b] z-10" />
+                {/* WIDENED LINE: Changed w-[200px] to w-[240px] */}
+                <div className="absolute bottom-[-1px] w-[240px] h-[2px] bg-[#1e293b] z-10" />
             </div>
 
             <div className="flex gap-6 hidden xl:flex">
