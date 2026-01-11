@@ -1,9 +1,10 @@
 import { Navbar } from "@/components/Navbar";
 import { SideTechPanel } from "@/components/SidePanel";
 import { MiddlePanel } from "@/components/MiddlePanel";
-import { RotateOverlay } from "@/components/RotateOverlay"; // Import the new component
+import { RotateOverlay } from "@/components/RotateOverlay";
 import { Zap, Activity, Droplets, Bell, FileText, BarChart3, Wrench, Battery, CloudSun, Mic } from "lucide-react";
 import { EnergyConsumption } from "@/components/dashboard/EnergyConsumption";
+import { ElectricalSystem } from "@/components/dashboard/ElectricalSystem";
 
 export default function Home() {
   return (
@@ -20,7 +21,10 @@ export default function Home() {
               <SideTechPanel title="Energy Consumption" icon={Zap} className="h-[22%]">
                 <EnergyConsumption />
               </SideTechPanel>
-              <SideTechPanel title="Electrical System" icon={Battery} className="h-[22%]" />
+            
+              <SideTechPanel title="Electrical System" icon={Zap} className="h-[28%]">
+                  <ElectricalSystem />
+              </SideTechPanel>
               <SideTechPanel title="Pumps Status" icon={Activity} className="flex-1" />
               <SideTechPanel title="Notification Monitor" icon={Bell} className="h-[15%]" />
             </div>
