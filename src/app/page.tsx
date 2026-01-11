@@ -3,6 +3,7 @@ import { SideTechPanel } from "@/components/SidePanel";
 import { MiddlePanel } from "@/components/MiddlePanel";
 import { RotateOverlay } from "@/components/RotateOverlay"; // Import the new component
 import { Zap, Activity, Droplets, Bell, FileText, BarChart3, Wrench, Battery, CloudSun, Mic } from "lucide-react";
+import { EnergyConsumption } from "@/components/dashboard/EnergyConsumption";
 
 export default function Home() {
   return (
@@ -16,7 +17,9 @@ export default function Home() {
           <div className="flex-1 grid grid-cols-12 gap-5 p-5 min-h-0 pt-8 relative z-10"> 
             
             <div className="col-span-3 flex flex-col gap-4 h-full">
-              <SideTechPanel title="Energy Consumption" icon={Zap} className="h-[22%]" />
+              <SideTechPanel title="Energy Consumption" icon={Zap} className="h-[22%]">
+                <EnergyConsumption />
+              </SideTechPanel>
               <SideTechPanel title="Electrical System" icon={Battery} className="h-[22%]" />
               <SideTechPanel title="Pumps Status" icon={Activity} className="flex-1" />
               <SideTechPanel title="Notification Monitor" icon={Bell} className="h-[15%]" />
