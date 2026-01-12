@@ -67,11 +67,20 @@ export function Gauge({
             filter={`url(#${filterId})`} 
           />
           
+          <path 
+            d="M 40 100 A 60 60 0 0 1 160 100" 
+            fill="none" 
+            stroke="white" 
+            strokeWidth="2" 
+            strokeLinecap="round" 
+            strokeOpacity="0.9"
+          />
+
           <g fill="white">
              <circle cx="20" cy="100" r="3" /> 
-             <circle cx="60" cy="31" r="3" />
+             <circle cx="43.5" cy="43.5" r="3" />
              <circle cx="100" cy="20" r="3" /> 
-             <circle cx="140" cy="31" r="3" />
+             <circle cx="156.5" cy="43.5" r="3" />
              <circle cx="180" cy="100" r="3" />
           </g>
 
@@ -83,21 +92,21 @@ export function Gauge({
           {ticks.length === 5 && (
             <>
               <text x="5" y="105" textAnchor="middle" fill="#64748b" fontSize="8" fontWeight="bold">{ticks[0]}</text>
-              <text x="55" y="25" textAnchor="middle" fill="#64748b" fontSize="8" fontWeight="bold">{ticks[1]}</text>
+              <text x="35" y="40" textAnchor="middle" fill="#64748b" fontSize="8" fontWeight="bold">{ticks[1]}</text>
               <text x="100" y="10" textAnchor="middle" fill="white" fontSize="9" fontWeight="bold">{ticks[2]}</text>
-              <text x="145" y="25" textAnchor="middle" fill="#64748b" fontSize="8" fontWeight="bold">{ticks[3]}</text>
+              <text x="165" y="40" textAnchor="middle" fill="#64748b" fontSize="8" fontWeight="bold">{ticks[3]}</text>
               <text x="195" y="105" textAnchor="middle" fill="#64748b" fontSize="8" fontWeight="bold">{ticks[4]}</text>
             </>
           )}
         </svg>
       </div>
 
-      <div className="h-[20%] min-h-[16px] w-full flex items-center justify-center gap-[2px] mb-1">
+      <div className="h-[15%] min-h-[10px] w-full flex items-center justify-center gap-[2px] mb-1 ml-3 ">
         {digitArray.map((d, i) => (
           <div key={i} className="h-full aspect-[2/3] max-h-[24px] bg-[#0b121f] border border-slate-700 rounded-[1px] flex items-center justify-center shadow-inner">
              <span 
-                className="font-mono font-bold text-[8px] lg:text-[10px] xl:text-[11px]"
-                style={{ color: colors.text }}
+               className="font-mono font-bold text-[8px] lg:text-[10px] xl:text-[11px]"
+               style={{ color: colors.text }}
              >
                 {d}
              </span>
