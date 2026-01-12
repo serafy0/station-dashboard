@@ -40,7 +40,6 @@ export function ElectricalSystem() {
           statusText="47250 L" 
           statusType="text"
           color="#8b5cf6" 
-          className="border-t-0 mt-0 pt-0 items-center" 
         />
       </div>
     </div>
