@@ -5,6 +5,8 @@ import { RotateOverlay } from "@/components/RotateOverlay";
 import { Zap, Activity, Droplets, Bell, FileText, BarChart3, Wrench, Battery, CloudSun, Mic } from "lucide-react";
 import { EnergyConsumption } from "@/components/dashboard/EnergyConsumption";
 import { ElectricalSystem } from "@/components/dashboard/ElectricalSystem";
+import { PumpsStatus } from "@/components/dashboard/PumpsStatus";
+import { NotificationMonitor } from "@/components/dashboard/NotificationMonitor";
 
 export default function Home() {
   return (
@@ -25,8 +27,12 @@ export default function Home() {
               <SideTechPanel title="Electrical System" icon={Zap} className="h-[28%]">
                   <ElectricalSystem />
               </SideTechPanel>
-              <SideTechPanel title="Pumps Status" icon={Activity} className="flex-1" />
-              <SideTechPanel title="Notification Monitor" icon={Bell} className="h-[15%]" />
+              <SideTechPanel title="Pumps Status" icon={Activity} className="h-[22%]">
+                 <PumpsStatus />
+              </SideTechPanel>       
+              <SideTechPanel title="Notification Monitor" icon={Bell} className="h-[20%]">
+                 <NotificationMonitor />
+              </SideTechPanel>
             </div>
 
             <div className="col-span-6 flex flex-col gap-5 h-full relative">
