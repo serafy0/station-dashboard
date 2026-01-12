@@ -7,6 +7,7 @@ import { EnergyConsumption } from "@/components/dashboard/EnergyConsumption";
 import { ElectricalSystem } from "@/components/dashboard/ElectricalSystem";
 import { PumpsStatus } from "@/components/dashboard/PumpsStatus";
 import { NotificationMonitor } from "@/components/dashboard/NotificationMonitor";
+import { StationFlow } from "@/components/dashboard/StationFlow";
 
 export default function Home() {
   return (
@@ -19,7 +20,7 @@ export default function Home() {
 
           <div className="flex-1 grid grid-cols-12 gap-5 p-5 min-h-0 pt-8 relative z-10"> 
             
-            <div className="col-span-3 flex flex-col gap-4 h-full">
+            <div className="col-span-3 flex flex-col gap-3 h-full">
               <SideTechPanel title="Energy Consumption" icon={Zap} className="h-[22%]">
                 <EnergyConsumption />
               </SideTechPanel>
@@ -70,8 +71,10 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="col-span-3 flex flex-col gap-4 h-full">
-              <SideTechPanel title="Station Flow" icon={Activity} className="h-[20%]" />
+            <div className="col-span-3 flex flex-col gap-3 h-full">
+              <SideTechPanel title="Station Flow" icon={Activity} className="h-[25%]">
+                 <StationFlow />
+              </SideTechPanel>
               <SideTechPanel title="Water Levels" icon={Droplets} className="h-[25%]" />
               <SideTechPanel title="Flow / Level Trend" icon={BarChart3} className="flex-1" />
               <SideTechPanel title="System Maintenance" icon={Wrench} className="h-[20%]" />
