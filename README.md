@@ -28,6 +28,8 @@ bun dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 
-dash
+## Live Demo
+
+https://station-dashboard-iota.vercel.app/
 
 
