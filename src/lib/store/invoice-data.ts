@@ -1,7 +1,7 @@
 import { TrendDataSeries } from "@/interfaces/TrendDataSeries";
 
 const generateData = (base: number, variance: number) => 
-    Array.from({ length: 20 }, (_, i) => base + Math.sin(i * 0.2) * variance + (Math.random() * variance * 0.5));
+    Array.from({ length: 20 }, (_, i) => base + Math.sin(i * 0.2) * variance);
 
 export const INVOICE_DATA: TrendDataSeries = {
     label: "Invoice",

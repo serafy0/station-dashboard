@@ -1,8 +1,7 @@
 import { TrendDataSeries } from "@/interfaces/TrendDataSeries";
 
-
 const generateData = (base: number, variance: number) => 
-    Array.from({ length: 20 }, (_, i) => base + Math.sin(i * 0.8) * variance + (Math.random() * variance * 0.1));
+    Array.from({ length: 20 }, (_, i) => base + Math.sin(i * 0.8) * variance);
 
 export const SUMP_LEVEL_DATA: TrendDataSeries = {
     label: "Level",
@@ -27,7 +26,7 @@ export const TANK_1_DATA: TrendDataSeries = {
 export const TANK_2_DATA: TrendDataSeries = {
     label: "Tank 2",
     unit: "m",
-    data: generateData(4.7, 0.1),
+    data: generateData(4.7, 0.15), 
     max: 6,
     color: "#3b82f6",
     decimals: 1
