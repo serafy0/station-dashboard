@@ -9,6 +9,7 @@ import { PumpsStatus } from "@/components/dashboard/PumpsStatus";
 import { NotificationMonitor } from "@/components/dashboard/NotificationMonitor";
 import { StationFlow } from "@/components/dashboard/StationFlow";
 import { WaterLevels } from "@/components/dashboard/WaterLevels";
+import { FlowLevelTrends } from "@/components/dashboard/FlowLevelTrends";
 
 export default function Home() {
   return (
@@ -80,8 +81,9 @@ export default function Home() {
                 <WaterLevels />
             </SideTechPanel>   
 
-           <SideTechPanel title="Flow / Level Trend" icon={BarChart3} className="flex-1" />
-              <SideTechPanel title="System Maintenance" icon={Wrench} className="h-[20%]" />
+<SideTechPanel title="Flow / Level Trend" icon={BarChart3} className="flex-1">
+    <FlowLevelTrends />
+</SideTechPanel>              <SideTechPanel title="System Maintenance" icon={Wrench} className="h-[20%]" />
             </div>
 
           </div>
