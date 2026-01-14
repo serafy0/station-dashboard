@@ -12,6 +12,7 @@ import { WaterLevels } from "@/components/dashboard/WaterLevels";
 import { FlowLevelTrends } from "@/components/dashboard/FlowLevelTrends";
 import { CurrentConsumption } from "@/components/dashboard/CurrentConsumption";
 import { StationInvoice } from "@/components/dashboard/StationInvoice";
+import { StationPerformance } from "@/components/dashboard/StationPerformance";
 
 export default function Home() {
   return (
@@ -61,12 +62,10 @@ export default function Home() {
                   </MiddlePanel>
 
                   <MiddlePanel title="Performance & KPI" icon={<Activity size={14} />} className="col-span-1">
-                      <div className="flex items-center justify-center h-full text-slate-500 text-[10px]">
-                          KPI CHART
-                      </div>
-                  </MiddlePanel>
-              </div>
-            </div>
+                      <StationPerformance />
+                  </MiddlePanel>        
+                </div>
+          </div>
 
             <div className="col-span-3 flex flex-col gap-3 h-full min-h-0">
               <SideTechPanel title="Station Flow" icon={Activity} className="h-[25%] shrink-0">
