@@ -91,13 +91,13 @@ export function NotificationMonitor() {
         <div className="flex items-center gap-1">
           <button 
             onClick={handlePrev}
-            className="w-5 h-5 bg-[#0b1221] border border-slate-700 rounded flex items-center justify-center hover:bg-slate-800 hover:border-[#22d3ee] transition-colors group"
+            className="w-11 h-11 bg-[#0b1221] border border-slate-700 rounded flex items-center justify-center hover:bg-slate-800 hover:border-[#22d3ee] transition-colors group"
           >
             <ChevronLeft size={12} className="text-slate-400 group-hover:text-white" />
           </button>
           <button 
             onClick={handleNext}
-            className="w-5 h-5 bg-[#0b1221] border border-slate-700 rounded flex items-center justify-center hover:bg-slate-800 hover:border-[#22d3ee] transition-colors group"
+            className="w-11 h-11 bg-[#0b1221] border border-slate-700 rounded flex items-center justify-center hover:bg-slate-800 hover:border-[#22d3ee] transition-colors group"
           >
              <ChevronRight size={12} className="text-slate-400 group-hover:text-white" />
           </button>

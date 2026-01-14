@@ -2,7 +2,7 @@ import { Navbar } from "@/components/Navbar";
 import { SideTechPanel } from "@/components/SidePanel";
 import { MiddlePanel } from "@/components/MiddlePanel";
 import { RotateOverlay } from "@/components/RotateOverlay";
-import { Zap, Activity, Droplets, Bell, BarChart3, Wrench, CloudSun, Mic } from "lucide-react";
+import { Zap, Activity, Droplets, Bell, BarChart3, Wrench, CloudSun, Mic, BatteryCharging, Flower } from "lucide-react";
 import { EnergyConsumption } from "@/components/dashboard/EnergyConsumption";
 import { ElectricalSystem } from "@/components/dashboard/ElectricalSystem";
 import { PumpsStatus } from "@/components/dashboard/PumpsStatus";
@@ -27,7 +27,7 @@ export default function Home() {
           <div className="flex-1 grid grid-cols-12 gap-5 p-5 min-h-0 pt-8 relative z-10"> 
             
             <div className="col-span-3 flex flex-col gap-3 h-full min-h-0">
-              <SideTechPanel title="Energy Consumption" icon={Zap} className="h-[22%] shrink-0">
+              <SideTechPanel title="Energy Consumption" icon={BatteryCharging} className="h-[22%] shrink-0">
                 <EnergyConsumption />
               </SideTechPanel>
             
@@ -44,13 +44,16 @@ export default function Home() {
 
             <div className="col-span-6 flex flex-col gap-4 h-full relative min-h-0">
               
-             
 
               <div className="flex-1 bg-[#020408]/40 border border-[#1e293b]/50 rounded-2xl relative overflow-hidden flex items-center justify-center group mt-8 shadow-2xl backdrop-blur-sm min-h-0">
-                  <div className="absolute inset-0 bg-gradient-to-t from-cyan-900/10 to-transparent pointer-events-none" />
-                  <div className="text-[#22d3ee]/60 text-xs tracking-[0.4em] font-sans font-bold border border-[#22d3ee]/20 px-6 py-3 rounded backdrop-blur-sm">
-                    [ 3D STATION PREVIEW ]
-                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-cyan-900/10 to-transparent pointer-events-none z-10" />
+                  
+                  <img 
+                    src="/station-preview.png" 
+                    alt="Station Preview" 
+                    className="w-full h-full object-contain"
+                  />
+                                
               </div>
 
               <div className="h-[26%] grid grid-cols-4 gap-4 shrink-0">
@@ -62,14 +65,14 @@ export default function Home() {
                       <CurrentConsumption />
                   </MiddlePanel>
 
-                  <MiddlePanel title="Performance & KPI" icon={<Activity size={14} />} className="col-span-1">
+                  <MiddlePanel title="Performance & KPI" className="col-span-1">
                       <StationPerformance />
                   </MiddlePanel>        
                 </div>
           </div>
 
             <div className="col-span-3 flex flex-col gap-3 h-full min-h-0">
-              <SideTechPanel title="Station Flow" icon={Activity} className="h-[25%] shrink-0">
+              <SideTechPanel title="Station Flow" icon={Flower} className="h-[25%] shrink-0">
                   <StationFlow />
               </SideTechPanel>
               <SideTechPanel title="Water Levels" icon={Droplets} className="h-[26%] shrink-0">

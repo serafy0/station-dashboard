@@ -89,7 +89,7 @@ export function StationFlow() {
                     style={{ transformStyle: "preserve-3d" }}
                  >
                      <Droplet 
-                        className="w-6 h-6 text-[#22d3ee] fill-[#22d3ee]/20 drop-shadow-[0_0_10px_rgba(34,211,238,0.6)]" 
+                        className="w-15 h-15 text-[#22d3ee] fill-[#22d3ee]/20 drop-shadow-[0_0_10px_rgba(34,211,238,0.6)]" 
                         strokeWidth={1.5} 
                      />
                  </motion.div>

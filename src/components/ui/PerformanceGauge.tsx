@@ -45,7 +45,7 @@ export function PerformanceGauge({ percentage }: { percentage: number }) {
           r={radius}
           cx={outerSize / 2}
           cy={outerSize / 2}
-          className="drop-shadow-[0_0_8px_rgba(34,211,238,0.6)] transition-all duration-1000 ease-out"
+          className="transition-all duration-1000 ease-out"
         />
       </svg>
       
