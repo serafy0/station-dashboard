@@ -1,6 +1,6 @@
 "use client";
 
-import { Home, Zap, Activity, Droplets, LayoutDashboard, Calendar, BarChart2, Wrench, CpuIcon, Power, ZapIcon, Cuboid, ChartLine } from "lucide-react";
+import { Home, LayoutDashboard, Calendar, CpuIcon, Power, ZapIcon, Cuboid, ChartLine, LucideIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export function Navbar() {
@@ -60,7 +60,6 @@ export function Navbar() {
                 <div className="absolute bottom-[-1px] w-[200px] h-[2px] bg-[#1e293b] z-10" />
             </div>
 
-            {/* Right Menu Items */}
             <div className="flex gap-4 xl:gap-6 hidden xl:flex">
                  {rightItems.map(item => <NavBtn key={item.name} name={item.name} icon={item.icon} isActive={item.active} />)}
             </div>
@@ -78,7 +77,7 @@ export function Navbar() {
 
 interface NavBtnProps {
     name: string;
-    icon: any;
+    icon: LucideIcon;
     isActive?: boolean;
 }
 

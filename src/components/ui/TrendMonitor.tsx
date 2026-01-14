@@ -41,7 +41,7 @@ export function TrendMonitor({ tabs, defaultTab, className }: TrendMonitorProps)
 
     const labels = useMemo(() => {
         const arr = [];
-        let time = new Date();
+        const time = new Date();
         time.setHours(7, 0, 0, 0);
         for (let i = 0; i < 20; i++) {
             const h = time.getHours().toString().padStart(2, '0');
@@ -88,7 +88,7 @@ export function TrendMonitor({ tabs, defaultTab, className }: TrendMonitorProps)
             ],
         };
         return data;
-    }, [activeTab, currentSeries, labels, activeColor]);
+    }, [currentSeries, labels, activeColor]);
 
     const options: ChartOptions<'line'> = {
         responsive: true,

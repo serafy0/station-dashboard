@@ -2,7 +2,7 @@ import { Navbar } from "@/components/Navbar";
 import { SideTechPanel } from "@/components/SidePanel";
 import { MiddlePanel } from "@/components/MiddlePanel";
 import { RotateOverlay } from "@/components/RotateOverlay";
-import { Zap, Activity, Droplets, Bell, BarChart3, Wrench, CloudSun, Mic, BatteryCharging, Flower } from "lucide-react";
+import { Zap, Activity, Droplets, Bell, BarChart3, Wrench, BatteryCharging, Flower } from "lucide-react";
 import { EnergyConsumption } from "@/components/dashboard/EnergyConsumption";
 import { ElectricalSystem } from "@/components/dashboard/ElectricalSystem";
 import { PumpsStatus } from "@/components/dashboard/PumpsStatus";
@@ -14,6 +14,7 @@ import { CurrentConsumption } from "@/components/dashboard/CurrentConsumption";
 import { StationInvoice } from "@/components/dashboard/StationInvoice";
 import { StationPerformance } from "@/components/dashboard/StationPerformance";
 import { SystemMaintenance } from "@/components/dashboard/SystemMaintenance";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -48,10 +49,11 @@ export default function Home() {
               <div className="flex-1 bg-[#020408]/40 border border-[#1e293b]/50 rounded-2xl relative overflow-hidden flex items-center justify-center group mt-8 shadow-2xl backdrop-blur-sm min-h-0">
                   <div className="absolute inset-0 bg-gradient-to-t from-cyan-900/10 to-transparent pointer-events-none z-10" />
                   
-                  <img 
-                    src="/station-preview.png" 
-                    alt="Station Preview" 
-                    className="w-full h-full object-contain"
+                  <Image 
+                  src="/station-preview.png" 
+                  alt="Station Preview" 
+                  fill
+                  className="object-contain p-4 opacity-90 group-hover:scale-105 transition-transform duration-700"
                   />
                                 
               </div>
