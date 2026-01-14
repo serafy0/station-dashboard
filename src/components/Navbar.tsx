@@ -23,7 +23,7 @@ export function Navbar() {
 
       <div className="h-full w-full flex items-center justify-between px-6 relative z-10">
         
-        <div className="hidden md:flex items-center gap-3 w-[260px] shrink-0">
+        <div className="flex items-center gap-3 w-[260px] shrink-0">
           <div className="h-[40px] w-[40px] border border-white/10 rounded-md flex items-center justify-center gap-[3px] bg-white/5 shadow-inner">
              <div className="w-[3px] h-[20px] bg-white shadow-[0_0_8px_white]" />
              <div className="w-[1px] h-[20px] bg-white/50" />
@@ -35,18 +35,18 @@ export function Navbar() {
           </div>
         </div>
 
-        <div className="flex-1 flex items-center justify-center gap-2 xl:gap-6 h-full relative">
+        <div className="flex-1 flex items-center justify-center gap-6 h-full relative">
             
-            <div className="mr-4 xl:mr-8">
+            <div className="mr-8">
                 <NavBtn name="Home" icon={Home} isActive={true} />
             </div>
 
-            <div className="flex gap-4 xl:gap-6 hidden xl:flex">
+            <div className="flex gap-6">
                 {leftItems.map(item => <NavBtn key={item.name} name={item.name} icon={item.icon} isActive={item.active} />)}
             </div>
 
             <div className="flex flex-col items-center justify-center relative h-full pt-[55px] w-[240px] shrink-0">
-                <span className="text-[22px] xl:text-[26px] font-bold text-white font-serif tracking-widest drop-shadow-[0_0_8px_rgba(255,255,255,0.5)] z-20 mt-[-4px] whitespace-nowrap">
+                <span className="text-[26px] font-bold text-white font-serif tracking-widest drop-shadow-[0_0_8px_rgba(255,255,255,0.5)] z-20 mt-[-4px] whitespace-nowrap">
                     Station 5
                 </span>
                 
@@ -60,12 +60,12 @@ export function Navbar() {
                 <div className="absolute bottom-[-1px] w-[200px] h-[2px] bg-[#1e293b] z-10" />
             </div>
 
-            <div className="flex gap-4 xl:gap-6 hidden xl:flex">
+            <div className="flex gap-6">
                  {rightItems.map(item => <NavBtn key={item.name} name={item.name} icon={item.icon} isActive={item.active} />)}
             </div>
         </div>
 
-        <div className="hidden md:flex justify-end w-[260px] shrink-0">
+        <div className="flex justify-end w-[260px] shrink-0">
           <span className="text-[24px] font-bold text-[#22d3ee] tracking-widest font-sans drop-shadow-[0_0_8px_rgba(34,211,238,0.4)]">
             SIEMENS
           </span>
