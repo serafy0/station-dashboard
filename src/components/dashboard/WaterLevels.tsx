@@ -59,7 +59,7 @@ export function WaterLevels() {
                 <div className="shrink-0 h-[90%]">
                     <WaterTank percentage={mainTankPercentage} />
                 </div>
-                <div className="flex-1 flex flex-col justify-center gap-6">
+                <div className="flex-1 flex flex-col justify-center gap-15">
                     <SegmentedBar 
                         label="Tank 1" 
                         value={tank1.percentage} 

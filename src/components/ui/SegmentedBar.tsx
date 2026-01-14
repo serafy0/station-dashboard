@@ -19,7 +19,7 @@ export function SegmentedBar({ label, value, displayValue, fromColor, toColor }:
   return (
     <div className="flex items-center gap-3 w-full">
       <span 
-        className="text-[10px] font-bold uppercase tracking-wider w-20 shrink-0 text-right transition-colors duration-300"
+        className="text-[11px] font-bold uppercase   shrink-0 text-right transition-colors duration-300"
         style={{ color: toColor }}
       >
         {label}
