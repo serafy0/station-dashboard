@@ -13,6 +13,7 @@ import { FlowLevelTrends } from "@/components/dashboard/FlowLevelTrends";
 import { CurrentConsumption } from "@/components/dashboard/CurrentConsumption";
 import { StationInvoice } from "@/components/dashboard/StationInvoice";
 import { StationPerformance } from "@/components/dashboard/StationPerformance";
+import { SystemMaintenance } from "@/components/dashboard/SystemMaintenance";
 
 export default function Home() {
   return (
@@ -77,8 +78,10 @@ export default function Home() {
               <SideTechPanel title="Flow / Level Trend" icon={BarChart3} className="flex-1 min-h-0">
                 <FlowLevelTrends />
               </SideTechPanel>       
-              <SideTechPanel title="System Maintenance" icon={Wrench} className="h-[20%] shrink-0" />
-            </div>
+              <SideTechPanel title="System Maintenance" icon={Wrench} className="h-[20%] shrink-0">
+                <SystemMaintenance />
+              </SideTechPanel>            
+              </div>
 
           </div>
       </div>
