@@ -8,7 +8,7 @@ import { StatusCard } from "../ui/StatusCard";
 
 export function ElectricalSystem() {
   return (
-    <div className="w-full h-full flex flex-col p-2 pt-3 gap-3">
+    <div className="absolute w-full h-full flex flex-col p-2 pt-3 gap-3">
       
       <div className="flex-1 flex gap-3 min-h-0">
         

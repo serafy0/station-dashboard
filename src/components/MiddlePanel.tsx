@@ -18,7 +18,7 @@ export function MiddlePanel({ title, icon, children, className }: MiddlePanelPro
       className
     )}>
       
-      <div className="flex flex-col px-4 pt-3 pb-2 bg-gradient-to-r from-transparent via-[#1e293b]/30 to-transparent">
+      <div className="flex flex-col px-4 pt-3 pb-2 bg-gradient-to-r from-transparent via-[#1e293b]/30 to-transparent shrink-0">
          
          <div className="flex items-center justify-between mb-1.5">
             <span className="text-[11px] font-bold text-slate-100 tracking-[0.2em] uppercase font-sans">
@@ -35,7 +35,7 @@ export function MiddlePanel({ title, icon, children, className }: MiddlePanelPro
                 initial={{ width: "4px", opacity: 0.5 }}
                 animate={{ 
                     width: ["4px", "100%", "4px"], 
-                    opacity: [0.5, 1, 0.5]         
+                    opacity: [0.5, 1, 0.5]        
                 }}
                 transition={{ 
                     duration: 4,      
@@ -47,7 +47,7 @@ export function MiddlePanel({ title, icon, children, className }: MiddlePanelPro
          </div>
       </div>
 
-      <div className="flex-1 p-3 relative">
+      <div className="flex-1 p-3 relative min-h-0">
         {children}
       </div>
     </div>
